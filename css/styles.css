@@ -1,13 +1,4 @@
 
-/* **
-font-family: 'Chelsea Market', cursive; /* for the header's h1  **
-font-family: 'Gamja Flower', cursive; /* for the rest of the page  **
-background-color: #e4572e; /* for the header element selector  **
-background-color: #fffff2; /* for the main element selector  **
-border: 4px solid #050401; /* for the borders  **
-box-shadow: 3px 3px 0 0 #e4572e; /* for the shadows  **
-/**/
-
 body {
 	font-family: 'Gamja Flower', cursive;
 }
@@ -28,13 +19,21 @@ main {
 	background-color: #fffff2;
 }
 
+article h2 {
+	padding: 10px;
+}
+
 article {
 	max-width:60%;
 	margin: 0 auto;
-	padding: 10px;
 	border: 4px solid #050401;
 	box-shadow: 3px 3px 0 0 #e4572e;
 	margin-bottom: 15px;
+	padding: 10px 0;
+}
+
+article p {
+	padding: 10px;
 }
 
 article img {
