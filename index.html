@@ -17,27 +17,57 @@
     </header>
     <main>
         <div style="margin-bottom: 15px; text-align: center;">
-            <button style="background: #000000; color:#ffffff; width: 50%;box-shadow: 3px 3px 0 0 #e4572e; display:block; margin: 0 auto; padding:10px;">Add a new note</button>
+            <button id="newNoteBtn" style="background: #000000; color:#ffffff; width: 50%;box-shadow: 3px 3px 0 0 #e4572e; display:block; margin: 0 auto; padding:10px;">Add a new note</button>
 
-            <span><strong>You have 2 notes</strong></span>
+            <span><strong>You have <span id="notesCount"></span> notes</strong></span>
         </div>
 
-        <article>
-            <h2>13/05/23: Spatulas</h2>
-            <p><img src="images/spatula.gif" alt="spatulas"></p>
-            <p>
-                Yesterday I went to the store and got some much-needed <a href="https://www.youtube.com/watch?v=2XbCWmY0eqY">spatulas!</a> (What better way to say I love myself than to buy myself a spatula?)
-            </p>
-        </article>
-        <article>
-            <h2>14/05/23: Cookie Monster Cupcakes</h2>
-            <p><img src="images/cookiemonster.jpg" alt="cookie monster"></p>
-            <p>My favorite cartoon character is Cookie Monster, and my favorite dessert is cupcakes, so Cookie Monster cupcakes are the best of both worlds.
-            </p>
+        <section id="articles">
+            <article>
+                <h2>13/05/23: Spatulas</h2>
+                <p><img src="images/spatula.gif" alt="spatulas"></p>
+                <p>
+                    Yesterday I went to the store and got some much-needed <a href="https://www.youtube.com/watch?v=2XbCWmY0eqY">spatulas!</a> (What better way to say I love myself than to buy myself a spatula?)
+                </p>
+            </article>
+            <article>
+                <h2>14/05/23: Cookie Monster Cupcakes</h2>
+                <p><img src="images/cookiemonster.jpg" alt="cookie monster"></p>
+                <p>My favorite cartoon character is Cookie Monster, and my favorite dessert is cupcakes, so Cookie Monster cupcakes are the best of both worlds.
+                </p>
 
-            <p>Did you know? Cookie Monster once said, <q>Sometimes me think what is love, and then me think love is what last cookie is for. Me give up the last cookie for you.</q> I wonder if the same applies for cupcakes? (If so, I don't think I can ever love ANYONE!)
-            </p>
-        </article>
+                <p>Did you know? Cookie Monster once said, <q>Sometimes me think what is love, and then me think love is what last cookie is for. Me give up the last cookie for you.</q> I wonder if the same applies for cupcakes? (If so, I don't think I can ever love ANYONE!)
+                </p>
+            </article>
+        </section>
+
+        <!-- The Modal -->
+        <div id="newNoteModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <form class="newNote">
+                    <h3>Add New Note</h3>
+
+                    <label for="noteTitle">Title</label>
+                    <input id="noteTitle" placeholder="Note Title" type="text">
+                    <br>
+                    <label for="noteBody">Note</label>
+                    <textarea name="noteBody" id="noteBody" placeholder="Note Content..." style="min-height:100px;max-height:150px;min-width:50%;max-width:100%;"></textarea>
+                    <br>
+                    <label for="img">Image Link</label>
+                    <input name="img" id="noteImgSource" placeholder="image link" type="url">
+
+                    <br>
+                    <div class="noteActionButtons">
+                        <button id="cancelBtn">Cancel</button>
+                        <button id="addBtn">Add</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
     </main>
     <hr>
     <footer>
@@ -51,6 +81,7 @@
         <p>&copy; 2023 Sanni. No Rights Reserved.</p>
     </footer>
 
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
